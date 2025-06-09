@@ -1,3 +1,22 @@
+# MeLevaLa - Backend Laravel
+
+## Como rodar
+
+### Pré-requisitos
+- Docker instalado
+
+### Passos
+
+1. Clone este repositório
+2. No terminal (ou Git Bash), rode:
+
+```bash
+docker compose up -d
+docker exec melevala_app composer install
+docker exec melevala_app php artisan key:generate
+docker exec melevala_app php artisan migrate:fresh --seed
+```
+
 # Exemplos de Login de Usuários
 
 Este arquivo contém exemplos de requisições JSON para login de usuários na API, utilizando o endpoint `/api/login` (ou outro definido no seu projeto).
@@ -59,24 +78,6 @@ A resposta será um token de autenticação do tipo Bearer que poderá ser usado
 
 ---
 
-# MeLevaLa - Backend Laravel
-
-## Como rodar
-
-### Pré-requisitos
-- Docker instalado
-
-### Passos
-
-1. Clone este repositório
-2. No terminal (ou Git Bash), rode:
-
-```bash
-docker compose up -d
-docker exec melevala_app composer install
-docker exec melevala_app php artisan key:generate
-docker exec melevala_app php artisan migrate:fresh --seed
-```
 
 
 # 📘 Documentação Básica da API - MeLevaLa
